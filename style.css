@@ -1,0 +1,98 @@
+/* 1. Naya Animation Define Karein (Keyframes) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Background animation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Background Movement */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    
+    /* 2. Container Entrance Animation */
+    animation: fadeInUp 0.6s ease-out;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* 3. Smooth transition for focus */
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    /* 4. Button transition */
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+button:hover {
+    background: #5a67d8;
+    transform: translateY(-2px); /* Halki si lift */
+}
+
+button:active {
+    transform: translateY(0); /* Click karne par wapas neeche */
+}
+
+#message {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
